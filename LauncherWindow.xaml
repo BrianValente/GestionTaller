@@ -1,13 +1,25 @@
-﻿<Window x:Class="Gestion_Taller.MainWindow"
+﻿<Window x:Class="Gestion_Taller.LauncherWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_Taller"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Launcher" Height="231.241" Width="625.862">
     <Grid>
-        <Label x:Name="label" x:Uid="test" HorizontalAlignment="Left" Margin="157,136,0,0" VerticalAlignment="Top"/>
-
+        <Label Content="Administracion" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="10,91,0,0" TextWrapping="Wrap" Text="Ingrese su contraseña" VerticalAlignment="Top" Width="188"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="40" Margin="10,152,0,0" VerticalAlignment="Top" Width="188"/>
+        <Label Content="Profesor" HorizontalAlignment="Left" Height="68" Margin="361,10,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="40" Margin="361,152,0,0" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>
