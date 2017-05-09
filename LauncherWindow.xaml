@@ -9,9 +9,9 @@
     <Grid>
         <Label Content="Administracion" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
         <TextBox HorizontalAlignment="Left" Height="28" Margin="10,91,0,0" TextWrapping="Wrap" Text="Ingrese su contraseña" VerticalAlignment="Top" Width="188"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="40" Margin="10,152,0,0" VerticalAlignment="Top" Width="188"/>
+        <Button Content="Iniciar sesion" HorizontalAlignment="Left" Height="40" Margin="10,152,0,0" VerticalAlignment="Top" Width="188"/>
         <Label Content="Profesor" HorizontalAlignment="Left" Height="68" Margin="361,10,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="40" Margin="361,152,0,0" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5">
+        <Button Content="Iniciar sesion" HorizontalAlignment="Left" Height="40" Margin="361,152,0,0" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
