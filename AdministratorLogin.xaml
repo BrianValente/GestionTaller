@@ -7,13 +7,9 @@
         mc:Ignorable="d"
         Title="AdministratorLogin" Height="186.207" Width="300">
     <Grid>
-                <Label Content="Administrator Login" HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" Width="275" FontSize="30" Grid.ColumnSpan="2" Margin="0,10,0,0"/>
-        <PasswordBox HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="125"/>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="48*"/>
-            <ColumnDefinition Width="247*"/>
-        </Grid.ColumnDefinitions>
-
+        <Label Content="Administración" HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" FontSize="30" Margin="0,10,0,0"/>
+        <Label Content="Ingrese la contraseña:" HorizontalAlignment="Center" Margin="0,68,0,0" VerticalAlignment="Top" FontSize="10" />
+        <PasswordBox HorizontalAlignment="Center" Margin="0,0,0,48.5" VerticalAlignment="Bottom" Width="140" />
+        <Button Content="Ingresar" HorizontalAlignment="Center" Margin="0,129,0,10" VerticalAlignment="Bottom" Width="75"/>
     </Grid>
 </Window>
