@@ -28,5 +28,12 @@ namespace Gestion_Taller {
             THW.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window1 AHW = new Window1();
+            AHW.Show();
+            this.Close();
+        }
     }
 }

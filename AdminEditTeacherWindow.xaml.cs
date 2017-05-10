@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace Gestion_Taller
+{
+    /// <summary>
+    /// Interaction logic for AdminEditTeacherWindow.xaml
+    /// </summary>
+    public partial class AdminEditTeacherWindow : Window
+    {
+        public AdminEditTeacherWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 AHW = new Window1();
+            this.Close();
+        }
+    }
+}

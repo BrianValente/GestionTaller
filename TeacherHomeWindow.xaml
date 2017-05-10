@@ -8,7 +8,7 @@
         Title="Inicio de Profesores" Height="291.724" Width="494.483">
     <Grid>
         <Button Content="Retirar" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Width="80" Height="35" Click="Button_Click"/>
-        <Button Content="Devolver" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="80" Height="35"/>
+        <Button Content="Devolver" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="80" Height="35" Click="Button_Click_1"/>
         <Image HorizontalAlignment="Center" Height="220" Margin="0,20,0,0" VerticalAlignment="Top">
             <Image.Source>
                 <BitmapImage UriSource="/Images/Logo-Juan23.jpg" />

@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Administración" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
         <PasswordBox HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="188"/>
-        <Button Content="Iniciar sesión" HorizontalAlignment="Left" Height="40" Margin="10,152,0,0" VerticalAlignment="Top" Width="188"/>
+        <Button Content="Iniciar sesión" HorizontalAlignment="Left" Height="40" Margin="10,152,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click_1"/>
         <Label Content="Profesor" HorizontalAlignment="Left" Height="68" Margin="361,10,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Button Content="Iniciar sesión" HorizontalAlignment="Left" Height="40" Margin="361,152,0,0" VerticalAlignment="Top" Width="247" RenderTransformOrigin="0.5,0.5" Click="Button_Click"/>
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="153" Margin="308,31,0,0" Stroke="Black" VerticalAlignment="Top" Width="4"/>

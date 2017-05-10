@@ -54,13 +54,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminAddTeacherWindow.xaml.cs">
+      <DependentUpon>AdminAddTeacherWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteTeacherWindow.xaml.cs">
+      <DependentUpon>AdminDeleteTeacherWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditTeacherWindow.xaml.cs">
+      <DependentUpon>AdminEditTeacherWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="TeacherHomeWindow.xaml.cs">
       <DependentUpon>TeacherHomeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminHomeWindow.xaml.cs">
+      <DependentUpon>AdminHomeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WithdrawReturnWindow.xaml.cs">
       <DependentUpon>WithdrawReturnWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminAddTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminDeleteTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminEditTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LauncherWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TeacherHomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminHomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
