@@ -14,6 +14,6 @@
                 <BitmapImage UriSource="/Images/Logo-Juan23.jpg" />
             </Image.Source>
         </Image>
-
+        <Button Content="←" Height="20" HorizontalAlignment="Left" Margin="10,10,0,0" Name="button1" VerticalAlignment="Top" Width="20" Click="button1_Click" />
     </Grid>
 </Window>

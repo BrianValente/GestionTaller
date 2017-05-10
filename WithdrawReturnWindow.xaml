@@ -11,6 +11,6 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="79*"/>
         </Grid.ColumnDefinitions>
-
+        <Button Content="←" Height="20" HorizontalAlignment="Left" Margin="10,10,0,0" Name="button1" VerticalAlignment="Top" Width="20" Click="button1_Click" />
     </Grid>
 </Window>

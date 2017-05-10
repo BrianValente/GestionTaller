@@ -25,14 +25,21 @@ namespace Gestion_Taller
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
             WithdrawReturnWindow WRW = new WithdrawReturnWindow();
             WRW.Show();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            LauncherWindow LW = new LauncherWindow();
+            LW.Show();
+            this.Close();
         }
     }
 }
