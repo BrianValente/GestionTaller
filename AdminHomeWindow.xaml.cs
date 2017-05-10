@@ -43,5 +43,12 @@ namespace Gestion_Taller
             AETW.Show();
             this.Close();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            LauncherWindow LW = new LauncherWindow();
+            LW.Show();
+            this.Close();
+        }
     }
 }

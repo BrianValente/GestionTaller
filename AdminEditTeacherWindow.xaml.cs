@@ -27,6 +27,7 @@ namespace Gestion_Taller
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Window1 AHW = new Window1();
+            AHW.Show();
             this.Close();
         }
     }

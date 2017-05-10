@@ -8,7 +8,7 @@
         Title="Window1" Height="347.727" Width="417.614">
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="187" Margin="205,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
-        <Button x:Name="button" Content="Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
+        <Button x:Name="button" Content="Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Click="button_Click" />
         <Label x:Name="label" Content="Profesores" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Total:" HorizontalAlignment="Left" Margin="238,83,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="[cantidad]" HorizontalAlignment="Left" Margin="277,83,0,0" VerticalAlignment="Top"/>
