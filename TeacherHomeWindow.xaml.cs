@@ -22,5 +22,12 @@ namespace Gestion_Taller
         public TeacherHomeWindow() {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WithdrawReturnWindow WRW = new WithdrawReturnWindow();
+            WRW.Show();
+            this.Close();
+        }
     }
 }

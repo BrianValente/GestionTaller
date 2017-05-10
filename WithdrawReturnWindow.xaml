@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="WithdrawReturnWindow" Height="300" Width="300">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+
     </Grid>
 </Window>
