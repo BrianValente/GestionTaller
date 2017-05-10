@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Launcher" Height="231.241" Width="625.862">
     <Grid>
-        <Label Content="Administracion" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="Administración" HorizontalAlignment="Left" Height="62" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36"/>
         <PasswordBox HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="188"/>
         <Button Content="Iniciar sesion" HorizontalAlignment="Left" Height="40" Margin="10,152,0,0" VerticalAlignment="Top" Width="188"/>
         <Label Content="Profesor" HorizontalAlignment="Left" Height="68" Margin="361,10,0,0" VerticalAlignment="Top" FontSize="36"/>
