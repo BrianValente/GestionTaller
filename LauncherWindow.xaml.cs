@@ -21,5 +21,12 @@ namespace Gestion_Taller {
         public LauncherWindow() {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherHomeWindow THW = new TeacherHomeWindow();
+            THW.Show();
+            this.Close();
+        }
     }
 }
