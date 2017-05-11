@@ -5,6 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Gestion_Taller {
-    class DBConnection {
+    public sealed class DBConnection {
+        private static readonly DBConnection instance = new DBConnection();
+
+        private DBConnection() {
+
+        }
+
+        public static DBConnection Instance {
+            get {
+                return instance;
+            }
+        }
+
+        public String GetAdministratorPassword() {
+            return "pape";
+        }
     }
 }
