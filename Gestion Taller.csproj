@@ -141,16 +141,16 @@
     <Resource Include="Images\Brian.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Logo-Juan23.jpg" />
+    <Resource Include="Images\school_logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Agregar profesor.png" />
+    <Resource Include="Images\ic_teacher_add.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Borrar profesor.png" />
+    <Resource Include="Images\ic_teacher_delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Editar profesor.png" />
+    <Resource Include="Images\ic_teacher_edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
