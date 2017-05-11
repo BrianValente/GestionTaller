@@ -19,13 +19,20 @@ namespace Gestion_Taller {
             InitializeComponent();
         }
 
-        private void openTeacherHomeWindow(object sender, RoutedEventArgs e) {
-            TeacherHomeWindow THW = new TeacherHomeWindow();
-            THW.Show();
+        private void OpenTeacherHomeWindow(object sender, RoutedEventArgs e) {
+            TeacherHomeWindow teacherHomeWindow = new TeacherHomeWindow();
+            teacherHomeWindow.Show();
             this.Close();
         }
 
-        private void openAdminHomeWindow(object sender, RoutedEventArgs e) {
+        private void OpenAdminHomeWindow(object sender, RoutedEventArgs e) {
+            String password = UIAdminPasswordBox.Password;
+
+            if (!password.Equals(DBConnection.Instance.GetAdministratorPassword())) {
+                MessageBox.Show("Incorrect password");
+                return;
+            }
+
             AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
             adminHomeWindow.Show();
             this.Close();

@@ -33,23 +33,23 @@ namespace Gestion_Taller {
             UIStatusLabel.Content = status;
         }
 
-        private void goBack(object sender, RoutedEventArgs e) {
+        private void GoBack(object sender, RoutedEventArgs e) {
             TeacherHomeWindow THW = new TeacherHomeWindow();
             THW.Show();
             this.Close();
         }
 
-        private static WithdrawReturnWindow getWindow(bool withdraw) {
+        private static WithdrawReturnWindow GetWindow(bool withdraw) {
             WithdrawReturnWindow withdrawReturnWindow = new WithdrawReturnWindow(withdraw);
             return withdrawReturnWindow;
         }
 
-        public static WithdrawReturnWindow getReturnWindow() {
-            return getWindow(false);
+        public static WithdrawReturnWindow GetReturnWindow() {
+            return GetWindow(false);
         }
 
-        public static WithdrawReturnWindow getWithdrawWindow() {
-            return getWindow(true);
+        public static WithdrawReturnWindow GetWithdrawWindow() {
+            return GetWindow(true);
         }
     }
 }

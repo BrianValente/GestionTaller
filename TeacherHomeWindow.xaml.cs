@@ -28,13 +28,13 @@ namespace Gestion_Taller {
         }
 
         private void openWithdrawWindow(object sender, RoutedEventArgs e) {
-            WithdrawReturnWindow withdrawWindow = WithdrawReturnWindow.getWithdrawWindow();
+            WithdrawReturnWindow withdrawWindow = WithdrawReturnWindow.GetWithdrawWindow();
             withdrawWindow.Show();
             this.Close();
         }
 
         private void openReturnWindow(object sender, RoutedEventArgs e) {
-            WithdrawReturnWindow returnWindow = WithdrawReturnWindow.getReturnWindow();
+            WithdrawReturnWindow returnWindow = WithdrawReturnWindow.GetReturnWindow();
             returnWindow.Show();
             this.Close();
         }
