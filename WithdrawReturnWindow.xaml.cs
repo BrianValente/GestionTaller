@@ -26,11 +26,9 @@ namespace Gestion_Taller {
             String status = "Status: ";
 
             if (withdraw)
-                status += "withdraw (retirar)";
+                WithdrawReturnButton.Content = "Retirar";
             else
-                status += "return (devolver)";
-
-            UIStatusLabel.Content = status;
+                WithdrawReturnButton.Content = "Devolver";
         }
 
         private void GoBack(object sender, RoutedEventArgs e) {
@@ -50,6 +48,10 @@ namespace Gestion_Taller {
 
         public static WithdrawReturnWindow GetWithdrawWindow() {
             return GetWindow(true);
+        }
+
+        private void WithdrawReturnAction(object sender, RoutedEventArgs e) {
+            MessageBox.Show("tu vieja");
         }
     }
 }

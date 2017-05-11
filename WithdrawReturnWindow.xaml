@@ -7,15 +7,14 @@
         mc:Ignorable="d"
         Title="WithdrawReturnWindow" Height="400" Width="500">
     <Grid>
-        
         <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="1.5*"/>
-                <RowDefinition Height="1.5*"/>
-                <RowDefinition Height="6*"/>
-                <RowDefinition Height="2*"/>
-                
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
+        
         <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
@@ -25,14 +24,23 @@
                 <Button Grid.Column="0" FontSize="18" Content="←" Height="35" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 10, 0, 0" Name="UIBackButton" Click="GoBack"  />
                 <Label Grid.Column="1" Content="Cuenta: Profesor" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="0, 0, 0, 0" Name="AccountLabel" />
         </Grid>
-        <Label Content="Nombre:" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="NameLabel" />
-        <ComboBox Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Width="150" Height="25" Margin="20, 5, 0, 5" Name="TeachersComboBox"/>
-        <Label Content="Herramienta:" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="ToolLabel" />
-        <TextBox Text="" Grid.Row="2" HorizontalAlignment="Center" Width="150" Height="25" Margin="20, 5, 0, 5" Name="SearchToolTextBox" />
-        <!--Aca iria el menu para elegir la herramienta, pero no se si hacer un ListBox o un ListView  o que hacer.-->
 
-        <Button Content="Retirar" Width="60" Height="30" Grid.Row="4" HorizontalAlignment="Right" Margin="0, 0, 20, 0" Name="ReturnButton"/>
-        <Button Content="Devolver" Width="60" Height="30" Grid.Row="4" HorizontalAlignment="Left" Margin="20, 0, 0, 0" Name="WithdrawButton"/>
+        <Grid Grid.Row="1">
+            <Label Content="Nombre:"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="NameLabel" />
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Width="150" Height="25" Margin="20, 5, 0, 5" Name="TeachersComboBox"/>
+        </Grid>
 
+        <Grid Grid.Row="2">
+            <Label Content="Herramienta:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="ToolLabel" />
+            <TextBox  Text="" HorizontalAlignment="Center" Width="150" Height="25" Margin="20, 5, 0, 5" Name="SearchToolTextBox" />
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0, 10, 0, 0">
+            <Label Content="A very big table" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Beige" />
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Button Name="WithdrawReturnButton" Content="Who knows?" Height="30" HorizontalAlignment="Right" Padding="20, 0, 20, 0" Margin="0, 0, 20, 0" Click="WithdrawReturnAction"/>
+        </Grid>
     </Grid>
 </Window>
