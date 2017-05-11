@@ -13,9 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace Gestion_Taller {
-    /// <summary>
-    /// Interaction logic for WithdrawReturnWindow.xaml
-    /// </summary>
     public partial class WithdrawReturnWindow : Window {
         private bool withdraw = false;
 
@@ -23,12 +20,10 @@ namespace Gestion_Taller {
             InitializeComponent();
             this.withdraw = withdraw;
 
-            String status = "Status: ";
-
             if (withdraw)
-                WithdrawReturnButton.Content = "Retirar";
+                UIWithdrawReturnButton.Content = "Retirar";
             else
-                WithdrawReturnButton.Content = "Devolver";
+                UIWithdrawReturnButton.Content = "Devolver";
         }
 
         private void GoBack(object sender, RoutedEventArgs e) {

@@ -40,7 +40,7 @@
         </Grid>
 
         <Grid Grid.Row="4">
-            <Button Name="WithdrawReturnButton" Content="Who knows?" Height="30" HorizontalAlignment="Right" Padding="20, 0, 20, 0" Margin="0, 0, 20, 0" Click="WithdrawReturnAction"/>
+            <Button Name="UIWithdrawReturnButton" Content="Who knows?" Height="30" HorizontalAlignment="Right" Padding="20, 0, 20, 0" Margin="0, 0, 20, 0" Click="WithdrawReturnAction"/>
         </Grid>
     </Grid>
 </Window>
