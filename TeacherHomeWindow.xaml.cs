@@ -12,33 +12,30 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Gestion_Taller
-{
+namespace Gestion_Taller {
     /// <summary>
     /// Interaction logic for TeacherHomeWindow.xaml
     /// </summary>
-    public partial class TeacherHomeWindow : Window
-    {
+    public partial class TeacherHomeWindow : Window {
         public TeacherHomeWindow() {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            WithdrawReturnWindow WRW = new WithdrawReturnWindow();
-            WRW.Show();
+        private void goBack(object sender, RoutedEventArgs e) {
+            LauncherWindow LW = new LauncherWindow();
+            LW.Show();
             this.Close();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            LauncherWindow LW = new LauncherWindow();
-            LW.Show();
+        private void openWithdrawWindow(object sender, RoutedEventArgs e) {
+            WithdrawReturnWindow withdrawWindow = WithdrawReturnWindow.getWithdrawWindow();
+            withdrawWindow.Show();
+            this.Close();
+        }
+
+        private void openReturnWindow(object sender, RoutedEventArgs e) {
+            WithdrawReturnWindow returnWindow = WithdrawReturnWindow.getReturnWindow();
+            returnWindow.Show();
             this.Close();
         }
     }

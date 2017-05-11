@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Gestion_Taller
-{
+namespace Gestion_Taller {
     /// <summary>
-    /// Interaction logic for AdminEditTeacherWindow.xaml
+    /// Interaction logic for AdminTeacherAddWindow.xaml
     /// </summary>
-    public partial class AdminEditTeacherWindow : Window
-    {
-        public AdminEditTeacherWindow()
-        {
+    public partial class AdminTeacherAddWindow : Window {
+        public AdminTeacherAddWindow() {
             InitializeComponent();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Window1 AHW = new Window1();
-            AHW.Show();
             this.Close();
         }
     }

@@ -17,15 +17,39 @@ namespace Gestion_Taller {
     /// Interaction logic for WithdrawReturnWindow.xaml
     /// </summary>
     public partial class WithdrawReturnWindow : Window {
-        public WithdrawReturnWindow() {
+        private bool withdraw = false;
+
+        private WithdrawReturnWindow(bool withdraw) {
             InitializeComponent();
+            this.withdraw = withdraw;
+
+            String status = "Status: ";
+
+            if (withdraw)
+                status += "withdraw (retirar)";
+            else
+                status += "return (devolver)";
+
+            UIStatusLabel.Content = status;
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
+        private void goBack(object sender, RoutedEventArgs e) {
             TeacherHomeWindow THW = new TeacherHomeWindow();
             THW.Show();
             this.Close();
+        }
+
+        private static WithdrawReturnWindow getWindow(bool withdraw) {
+            WithdrawReturnWindow withdrawReturnWindow = new WithdrawReturnWindow(withdraw);
+            return withdrawReturnWindow;
+        }
+
+        public static WithdrawReturnWindow getReturnWindow() {
+            return getWindow(false);
+        }
+
+        public static WithdrawReturnWindow getWithdrawWindow() {
+            return getWindow(true);
         }
     }
 }

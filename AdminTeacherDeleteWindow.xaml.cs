@@ -14,18 +14,17 @@ using System.Windows.Shapes;
 
 namespace Gestion_Taller
 {
-    /// <summary>
-    /// Interaction logic for AdminAddTeacherWindow.xaml
-    /// </summary>
-    public partial class AdminAddTeacherWindow : Window
+    public partial class AdminTeacherDeleteWindow : Window
     {
-        public AdminAddTeacherWindow()
+        public AdminTeacherDeleteWindow()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
+            AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
+            adminHomeWindow.Show();
             this.Close();
         }
     }

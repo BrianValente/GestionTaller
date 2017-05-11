@@ -1,4 +1,4 @@
-﻿<Window x:Class="Gestion_Taller.Window1"
+﻿<Window x:Class="Gestion_Taller.AdminHomeWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,19 +8,27 @@
         Title="Window1" Height="347.727" Width="417.614">
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="187" Margin="205,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
-        <Button x:Name="button" Content="Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Click="button_Click" />
-        <Label x:Name="label" Content="Profesores" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Total:" HorizontalAlignment="Left" Margin="238,83,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="[cantidad]" HorizontalAlignment="Left" Margin="277,83,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button1" Content="Ver profesores" HorizontalAlignment="Left" Margin="247,165,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button x:Name="button2" Content="Agregar" HorizontalAlignment="Left" Margin="228,130,0,0" VerticalAlignment="Top" Width="49" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Quitar" HorizontalAlignment="Left" Margin="282,130,0,0" VerticalAlignment="Top" Width="43" Click="button3_Click"/>
-        <Button x:Name="button4" Content="Modificar" HorizontalAlignment="Left" Margin="330,130,0,0" VerticalAlignment="Top" Width="61" Click="button4_Click"/>
-        <Label x:Name="label3" Content="Inventario general" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button5" Content="Agregar" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="51"/>
-        <Button x:Name="button6" Content="Quitar" HorizontalAlignment="Left" Margin="66,114,0,0" VerticalAlignment="Top" Width="51"/>
-        <Button x:Name="button7" Content="Modificar" HorizontalAlignment="Left" Margin="122,114,0,0" VerticalAlignment="Top" Width="58"/>
-        <Button x:Name="button8" Content="Ver inventario" HorizontalAlignment="Left" Margin="56,149,0,0" VerticalAlignment="Top" Width="80"/>
+        
+        <!-- Navigation -->
+        <Button x:Name="UINavigationBackButton" Content="Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Click="goBack" />
+        
+        <!-- Teachers -->
+        <Label x:Name="UITeacherTitleLabel" Content="Profesores" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top"/>
+
+        <Label x:Name="UITeacherInfoTotalTitle" Content="Total:" HorizontalAlignment="Left" Margin="238,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="UITeacherInfoTotalValue" Content="[cantidad]" HorizontalAlignment="Left" Margin="277,83,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="UITeacherAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="228,130,0,0" VerticalAlignment="Top" Width="49" Click="openAdminTeacherAddWindow"/>
+        <Button x:Name="UITeacherRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="282,130,0,0" VerticalAlignment="Top" Width="43" Click="openAdminTeacherDeleteWindow"/>
+        <Button x:Name="UITeacherModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="330,130,0,0" VerticalAlignment="Top" Width="61" Click="openAdminTeacherEditWindow"/>
+        <Button x:Name="UITeacherViewButton" Content="Ver profesores" HorizontalAlignment="Left" Margin="247,165,0,0" VerticalAlignment="Top" Width="109"/>
+        
+        <!-- Inventory -->
+        <Label x:Name="UIInventoryTitleLabel" Content="Inventario general" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="UIInventoryAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="51"/>
+        <Button x:Name="UIInventoryRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="66,114,0,0" VerticalAlignment="Top" Width="51"/>
+        <Button x:Name="UIInventoryModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="122,114,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button x:Name="UIInventoryViewButton" Content="Ver inventario" HorizontalAlignment="Left" Margin="56,149,0,0" VerticalAlignment="Top" Width="80"/>
 
     </Grid>
 </Window>

@@ -54,14 +54,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdminAddTeacherWindow.xaml.cs">
-      <DependentUpon>AdminAddTeacherWindow.xaml</DependentUpon>
+    <Compile Include="AdminTeacherAddWindow.xaml.cs">
+      <DependentUpon>AdminTeacherAddWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdminDeleteTeacherWindow.xaml.cs">
-      <DependentUpon>AdminDeleteTeacherWindow.xaml</DependentUpon>
+    <Compile Include="AdminTeacherDeleteWindow.xaml.cs">
+      <DependentUpon>AdminTeacherDeleteWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdminEditTeacherWindow.xaml.cs">
-      <DependentUpon>AdminEditTeacherWindow.xaml</DependentUpon>
+    <Compile Include="AdminTeacherEditWindow.xaml.cs">
+      <DependentUpon>AdminTeacherEditWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="TeacherHomeWindow.xaml.cs">
@@ -73,15 +73,15 @@
     <Compile Include="WithdrawReturnWindow.xaml.cs">
       <DependentUpon>WithdrawReturnWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AdminAddTeacherWindow.xaml">
+    <Page Include="AdminTeacherAddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdminDeleteTeacherWindow.xaml">
+    <Page Include="AdminTeacherDeleteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdminEditTeacherWindow.xaml">
+    <Page Include="AdminTeacherEditWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,7 +138,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\0.jpg" />
+    <Resource Include="Images\Brian.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Logo-Juan23.jpg" />

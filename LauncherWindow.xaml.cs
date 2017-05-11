@@ -14,25 +14,20 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Gestion_Taller {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class LauncherWindow : Window {
         public LauncherWindow() {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        private void openTeacherHomeWindow(object sender, RoutedEventArgs e) {
             TeacherHomeWindow THW = new TeacherHomeWindow();
             THW.Show();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Window1 AHW = new Window1();
-            AHW.Show();
+        private void openAdminHomeWindow(object sender, RoutedEventArgs e) {
+            AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
+            adminHomeWindow.Show();
             this.Close();
         }
     }

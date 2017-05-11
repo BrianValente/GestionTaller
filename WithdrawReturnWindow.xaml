@@ -7,10 +7,7 @@
         mc:Ignorable="d"
         Title="WithdrawReturnWindow" Height="300" Width="300">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="79*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="←" Height="20" HorizontalAlignment="Left" Margin="10,10,0,0" Name="button1" VerticalAlignment="Top" Width="20" Click="button1_Click" />
+        <Button Content="←" Height="20" HorizontalAlignment="Left" Margin="10,10,0,0" Name="UIBackButton" VerticalAlignment="Top" Width="20" Click="goBack" />
+        <Label Content="Label" HorizontalAlignment="Left" Margin="109,121,0,0" VerticalAlignment="Top" Name="UIStatusLabel"/>
     </Grid>
 </Window>

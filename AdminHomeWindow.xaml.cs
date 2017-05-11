@@ -12,42 +12,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Gestion_Taller
-{
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
-    public partial class Window1 : Window
-    {
-        public Window1()
-        {
+namespace Gestion_Taller {
+    public partial class AdminHomeWindow : Window {
+        public AdminHomeWindow() {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            AdminAddTeacherWindow AATW = new AdminAddTeacherWindow();
-            AATW.Show();
+        private void openAdminTeacherAddWindow(object sender, RoutedEventArgs e) {
+            AdminTeacherAddWindow adminTeacherAddWindow = new AdminTeacherAddWindow();
+            adminTeacherAddWindow.Show();
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            AdminDeleteTeacherWindow ADTW = new AdminDeleteTeacherWindow();
-            ADTW.Show();
+        private void openAdminTeacherDeleteWindow(object sender, RoutedEventArgs e) {
+            AdminTeacherDeleteWindow adminTeacherDeleteWindow = new AdminTeacherDeleteWindow();
+            adminTeacherDeleteWindow.Show();
             this.Close();
         }
 
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            AdminEditTeacherWindow AETW = new AdminEditTeacherWindow();
-            AETW.Show();
+        private void openAdminTeacherEditWindow(object sender, RoutedEventArgs e) {
+            AdminTeacherEditWindow adminTeacherEditWindow = new AdminTeacherEditWindow();
+            adminTeacherEditWindow.Show();
             this.Close();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            LauncherWindow LW = new LauncherWindow();
-            LW.Show();
+        private void goBack(object sender, RoutedEventArgs e) {
+            LauncherWindow launcherWindow = new LauncherWindow();
+            launcherWindow.Show();
             this.Close();
         }
     }
