@@ -8,10 +8,10 @@
         Title="Window1" Height="347.727" Width="417.614">
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="187" Margin="205,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
-        
+
         <!-- Navigation -->
-        <Button x:Name="UINavigationBackButton" Content="Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="48" Click="goBack" />
-        
+        <Button x:Name="UINavigationBackButton" Content="&lt;- Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="51" Click="goBack" />
+
         <!-- Teachers -->
         <Label x:Name="UITeacherTitleLabel" Content="Profesores" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top"/>
 
@@ -22,13 +22,19 @@
         <Button x:Name="UITeacherRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="282,130,0,0" VerticalAlignment="Top" Width="43" Click="openAdminTeacherDeleteWindow"/>
         <Button x:Name="UITeacherModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="330,130,0,0" VerticalAlignment="Top" Width="61" Click="openAdminTeacherEditWindow"/>
         <Button x:Name="UITeacherViewButton" Content="Ver profesores" HorizontalAlignment="Left" Margin="247,165,0,0" VerticalAlignment="Top" Width="109"/>
-        
+
+        <Image x:Name="Agregar_profesor_png" Margin="214,206,137,60" Source="Agregar profesor.png" Stretch="Fill" RenderTransformOrigin="0.071,0.198"/>
+        <Image x:Name="Borrar_profesor_png" Margin="279,206,72,60" Source="Borrar profesor.png" Stretch="Fill"/>
+        <Image x:Name="Editar_profesor_png" Margin="343,206,10,60" Source="Editar profesor.png" Stretch="Fill"/>
+
         <!-- Inventory -->
         <Label x:Name="UIInventoryTitleLabel" Content="Inventario general" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top"/>
         <Button x:Name="UIInventoryAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="51"/>
         <Button x:Name="UIInventoryRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="66,114,0,0" VerticalAlignment="Top" Width="51"/>
         <Button x:Name="UIInventoryModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="122,114,0,0" VerticalAlignment="Top" Width="58"/>
         <Button x:Name="UIInventoryViewButton" Content="Ver inventario" HorizontalAlignment="Left" Margin="56,149,0,0" VerticalAlignment="Top" Width="80"/>
-
+        <Label x:Name="UIAdminInfoTotalTitle" Content="Total:" HorizontalAlignment="Left" Margin="42,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="UIAdminInfoTotalValue" Content="[cantidad]" HorizontalAlignment="Left" Margin="81,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Cuenta: Administrador" HorizontalAlignment="Left" Height="22" Margin="136,10,0,0" VerticalAlignment="Top" Width="141"/>
     </Grid>
 </Window>
