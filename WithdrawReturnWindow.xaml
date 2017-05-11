@@ -5,9 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_Taller"
         mc:Ignorable="d"
-        Title="WithdrawReturnWindow" Height="300" Width="300">
+        Title="WithdrawReturnWindow" Height="400" Width="500">
     <Grid>
-        <Button Content="←" Height="20" HorizontalAlignment="Left" Margin="10,10,0,0" Name="UIBackButton" VerticalAlignment="Top" Width="20" Click="GoBack" />
-        <Label Content="Label" HorizontalAlignment="Left" Margin="109,121,0,0" VerticalAlignment="Top" Name="UIStatusLabel"/>
+        
+        <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+                
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" FontSize="18" Content="←" Height="35" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 10, 0, 0" Name="UIBackButton" Click="GoBack"  />
+                <Label Grid.Column="1" Content="Cuenta: Profesor" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="0, 0, 0, 0" Name="AccountLabel" />
+        </Grid>
+        <Label Content="Nombre:" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="NameLabel" />
+        <ComboBox Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Width="150" Height="25" Margin="20, 5, 0, 5" Name="TeachersComboBox"/>
+        <Label Content="Herramienta:" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="ToolLabel" />
+        <TextBox Text="" Grid.Row="2" HorizontalAlignment="Center" Width="150" Height="25" Margin="20, 5, 0, 5" Name="SearchToolTextBox" />
+        <!--Aca iria el menu para elegir la herramienta, pero no se si hacer un ListBox o un ListView  o que hacer.-->
+
+        <Button Content="Retirar" Width="60" Height="30" Grid.Row="4" HorizontalAlignment="Right" Margin="0, 0, 20, 0" Name="ReturnButton"/>
+        <Button Content="Devolver" Width="60" Height="30" Grid.Row="4" HorizontalAlignment="Left" Margin="20, 0, 0, 0" Name="WithdrawButton"/>
+
     </Grid>
 </Window>
