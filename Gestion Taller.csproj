@@ -143,5 +143,14 @@
   <ItemGroup>
     <Resource Include="Images\Logo-Juan23.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Agregar profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Borrar profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Editar profesor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
