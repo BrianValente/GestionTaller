@@ -16,6 +16,8 @@ namespace Gestion_Taller {
     public partial class AdminHomeWindow : Window {
         public AdminHomeWindow() {
             InitializeComponent();
+
+            UITeacherInfoTotalValue.Content = DBConnection.Instance.GetTeachers().Count;
         }
 
         private void openAdminTeacherAddWindow(object sender, RoutedEventArgs e) {
@@ -39,6 +41,18 @@ namespace Gestion_Taller {
             LauncherWindow launcherWindow = new LauncherWindow();
             launcherWindow.Show();
             this.Close();
+        }
+
+        private void ShowTeachers(object sender, RoutedEventArgs e) {
+            List<Teacher> teachers = DBConnection.Instance.GetTeachers();
+
+            String message = "";
+
+            foreach (Teacher teacher in teachers) {
+                message += "Id: " + teacher.Id + " First name: " + teacher.FirstName + "; Last name: " + teacher.LastName + Environment.NewLine;
+            }
+
+            MessageBox.Show(message);
         }
     }
 }
