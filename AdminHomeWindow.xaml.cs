@@ -54,5 +54,19 @@ namespace Gestion_Taller {
 
             MessageBox.Show(message);
         }
+
+     
+        private void ShowTools(object sender, RoutedEventArgs e)
+        {
+            List<Tools> tools = DBConnection.Instance.GetTools();
+
+            String message = "";
+
+            foreach (Tools tool in tools) {
+                message += "Id: " + tool.Id + " Name: " + tool.Name + "; Description: " + tool.Description + "; Icon ID:" + tool.Icon_id + Environment.NewLine;
+            }
+
+            MessageBox.Show(message);
+        }
     }
 }

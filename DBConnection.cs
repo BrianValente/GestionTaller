@@ -94,7 +94,24 @@ namespace Gestion_Taller {
 
             return new Teacher(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
         }
+
+        public List<Tools> GetTools()
+        {
+            List<Tools> tools = new List<Tools>();
+
+            String query = "SELECT * FROM tools";
+
+            SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            while (reader.Read()) {
+                tools.Add(new Tools(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3)));
+            }
+
+            return tools;
+        }
     }
+}
 
     public class Teacher {
         public int Id;
@@ -109,4 +126,19 @@ namespace Gestion_Taller {
             FullName = firstname + " " + lastname;
         }
     }
-}
+    public class Tools
+    {
+    public int Id;
+    public String Name;
+    public String Description;
+    public int Icon_id;
+
+        public Tools(int id, String name, String description, int icon_id)
+        {
+        Id = id;
+        Name = name;
+        Description = description;
+        Icon_id = icon_id;
+        }
+    }
+
