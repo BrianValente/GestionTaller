@@ -54,6 +54,18 @@ namespace Gestion_Taller {
             String query = "UPDATE teachers SET firstname = '" + firstName + "' WHERE id=" + teacherId;
         }
 
+
+        // Teachers
+
+        public Teacher AddTeacher(String firstname, String lastname) {
+            String query = "INSERT INTO teachers (firstname, lastname) VALUES ('" + firstname + "', '" + lastname + "');";
+
+            SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            return new Teacher((int)sqliteConnection.LastInsertRowId, firstname, lastname);
+        }
+
         public List<Teacher> GetTeachers() {
             List<Teacher> teachers = new List<Teacher>();
 
@@ -68,17 +80,29 @@ namespace Gestion_Taller {
 
             return teachers;
         }
+
+        public Teacher GetTeacherById(int id) {
+            String query = "SELECT * FROM teachers WHERE id=" + id;
+            SQLiteDataReader reader = new SQLiteCommand(query, sqliteConnection).ExecuteReader();
+
+            if (!reader.Read())
+                return null;
+
+            return new Teacher(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+        }
     }
 
     public class Teacher {
         public int Id;
         public String FirstName;
         public String LastName;
+        public String FullName;
 
         public Teacher(int id, String firstname, String lastname) {
             Id = id;
             FirstName = firstname;
             LastName = lastname;
+            FullName = firstname + " " + lastname;
         }
     }
 }

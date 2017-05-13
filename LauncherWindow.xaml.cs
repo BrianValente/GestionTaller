@@ -17,6 +17,10 @@ namespace Gestion_Taller {
     public partial class LauncherWindow : Window {
         public LauncherWindow() {
             InitializeComponent();
+
+            // Just for testing purposes
+            /*Teacher brianIGuess = DBConnection.Instance.GetTeacherById(1);
+            MessageBox.Show(brianIGuess.Id + " " + brianIGuess.FirstName + " " + brianIGuess.LastName);*/
         }
 
         private void OpenTeacherHomeWindow(object sender, RoutedEventArgs e) {

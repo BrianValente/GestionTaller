@@ -21,8 +21,13 @@ namespace Gestion_Taller {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
+        private void Close(object sender, RoutedEventArgs e) {
+            this.Close();
+        }
+
+        private void AddTeacher(object sender, RoutedEventArgs e) {
+            Teacher teacher = DBConnection.Instance.AddTeacher(UITeacherFirstNameTextBox.Text, UITeacherLastNameTextBox.Text);
+            MessageBox.Show("Profesor " + teacher.FullName + " agregado exitosamente.");
             this.Close();
         }
     }

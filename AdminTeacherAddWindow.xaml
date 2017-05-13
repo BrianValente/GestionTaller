@@ -8,12 +8,12 @@
         Title="AdminAddTeacherWindow" Height="190.91" Width="219.034">
     <Grid>
         <Label x:Name="label" Content="Agregar profesor" HorizontalAlignment="Left" Margin="53,7,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Nombre:" HorizontalAlignment="Left" Margin="11,38,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Apellido:" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="72,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="72,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Cancelar" HorizontalAlignment="Left" Margin="19,117,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Aceptar" HorizontalAlignment="Left" Margin="117,117,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="UITeacherFirstNameTextLabel" Content="Nombre:" HorizontalAlignment="Left" Margin="11,38,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="UITeacherLastNameTextLabel" Content="Apellido:" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UITeacherFirstNameTextBox" HorizontalAlignment="Left" Height="23" Margin="72,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="UITeacherLastNameTextBox" HorizontalAlignment="Left" Height="23" Margin="72,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="UICancelButton" Content="Cancelar" HorizontalAlignment="Left" Margin="19,117,0,0" VerticalAlignment="Top" Width="75" Click="Close"/>
+        <Button x:Name="UIAddButton" Content="Aceptar" HorizontalAlignment="Left" Margin="117,117,0,0" VerticalAlignment="Top" Width="75" Click="AddTeacher"/>
 
     </Grid>
 </Window>
