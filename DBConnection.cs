@@ -50,12 +50,16 @@ namespace Gestion_Taller {
             return "pape";
         }
 
-        private void setTeacherFirstName(int teacherId, String firstName) {
+
+        // Teachers
+
+        private void changeTeacherFirstName(int teacherId, String firstName) {
             String query = "UPDATE teachers SET firstname = '" + firstName + "' WHERE id=" + teacherId;
         }
 
-
-        // Teachers
+        private void changeTeacherLastName(int teacherId, String lastName) {
+            String query = "UPDATE teachers SET lastname = '" + lastName + "' WHERE id=" + teacherId;
+        }
 
         public Teacher AddTeacher(String firstname, String lastname) {
             String query = "INSERT INTO teachers (firstname, lastname) VALUES ('" + firstname + "', '" + lastname + "');";
