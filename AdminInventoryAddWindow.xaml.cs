@@ -17,11 +17,18 @@ namespace Gestion_Taller
     /// <summary>
     /// Lógica de interacción para Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AdminInventoryAddWindow : Window
     {
-        public Window1()
+        public AdminInventoryAddWindow()
         {
             InitializeComponent();
+        }
+
+        private void ReturnButton(object sender, RoutedEventArgs e)
+        {
+            AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
+            adminHomeWindow.Show();
+            this.Close();
         }
     }
 }

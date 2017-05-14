@@ -91,6 +91,12 @@
     <Compile Include="AdminInventoryAddWindow.xaml.cs">
       <DependentUpon>AdminInventoryAddWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminInventoryDeleteWindow.xaml.cs">
+      <DependentUpon>AdminInventoryDeleteWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventoryEditWindow.xaml.cs">
+      <DependentUpon>AdminInventoryEditWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WithdrawReturnWindow.xaml.cs">
       <DependentUpon>WithdrawReturnWindow.xaml</DependentUpon>
     </Compile>
@@ -127,6 +133,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminInventoryAddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminInventoryDeleteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminInventoryEditWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

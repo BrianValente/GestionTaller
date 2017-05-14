@@ -76,5 +76,27 @@ namespace Gestion_Taller {
 
             MessageBox.Show(message);
         }
+
+
+        private void ModifyInventoryButton(object sender, RoutedEventArgs e)
+        {
+            AdminInventoryEditWindow adminInventoryEditWindow = new AdminInventoryEditWindow();
+            adminInventoryEditWindow.Show();
+            this.Close();
+        }
+
+        private void DeleteInventoryButton(object sender, RoutedEventArgs e)
+        {
+            AdminInventoryDeleteWindow adminInventoryDeleteWindow = new AdminInventoryDeleteWindow();
+            adminInventoryDeleteWindow.Show();
+            this.Close();
+        }
+
+        private void AddInventoryButton(object sender, RoutedEventArgs e)
+        {
+            AdminInventoryAddWindow adminInventoryAddWindow = new AdminInventoryAddWindow();
+            adminInventoryAddWindow.Show();
+            this.Close();
+        }
     }
 }
