@@ -88,6 +88,9 @@
     <Compile Include="AdminHomeWindow.xaml.cs">
       <DependentUpon>AdminHomeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminInventoryAddWindow.xaml.cs">
+      <DependentUpon>AdminInventoryAddWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WithdrawReturnWindow.xaml.cs">
       <DependentUpon>WithdrawReturnWindow.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminHomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminInventoryAddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
