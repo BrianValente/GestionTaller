@@ -47,7 +47,7 @@ namespace Gestion_Taller {
         }
 
         public String GetAdministratorPassword() {
-            return "pape";
+            return "";
         }
 
 
@@ -122,9 +122,11 @@ namespace Gestion_Taller {
 
     public class Teacher {
         public int Id;
-        public String FirstName;
-        public String LastName;
-        public String FullName;
+
+        // TODO: http://stackoverflow.com/questions/5096926/what-is-the-get-set-syntax-in-c
+        public String FirstName { get; set; }
+        public String LastName { get; set; }
+        public String FullName { get; set; }
 
         public Teacher(int id, String firstname, String lastname) {
             Id = id;
