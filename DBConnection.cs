@@ -53,12 +53,14 @@ namespace Gestion_Taller {
 
         // Teachers
 
-        private void changeTeacherFirstName(int teacherId, String firstName) {
+        public void changeTeacherFirstName(int teacherId, String firstName) {
             String query = "UPDATE teachers SET firstname = '" + firstName + "' WHERE id=" + teacherId;
+            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
         }
 
-        private void changeTeacherLastName(int teacherId, String lastName) {
+        public void changeTeacherLastName(int teacherId, String lastName) {
             String query = "UPDATE teachers SET lastname = '" + lastName + "' WHERE id=" + teacherId;
+            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
         }
 
         public Teacher AddTeacher(String firstname, String lastname) {
@@ -120,21 +122,7 @@ namespace Gestion_Taller {
     }
 }
 
-    public class Teacher {
-        public int Id;
-
-        // TODO: http://stackoverflow.com/questions/5096926/what-is-the-get-set-syntax-in-c
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public String FullName { get; set; }
-
-        public Teacher(int id, String firstname, String lastname) {
-            Id = id;
-            FirstName = firstname;
-            LastName = lastname;
-            FullName = firstname + " " + lastname;
-        }
-    }
+    
 
     public class InventoryItem {
         public int Id;
