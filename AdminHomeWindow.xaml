@@ -32,7 +32,7 @@
         <Button x:Name="UIInventoryAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="51"/>
         <Button x:Name="UIInventoryRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="66,114,0,0" VerticalAlignment="Top" Width="51"/>
         <Button x:Name="UIInventoryModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="122,114,0,0" VerticalAlignment="Top" Width="58"/>
-        <Button x:Name="UIInventoryViewButton" Content="Ver inventario" HorizontalAlignment="Left" Margin="56,149,0,0" VerticalAlignment="Top" Width="80" Click="ShowTools"/>
+        <Button x:Name="UIInventoryViewButton" Content="Ver inventario" HorizontalAlignment="Left" Margin="56,149,0,0" VerticalAlignment="Top" Width="80" Click="ShowInventory"/>
         <Label x:Name="UIAdminInfoTotalTitle" Content="Total:" HorizontalAlignment="Left" Margin="42,83,0,0" VerticalAlignment="Top"/>
         <Label x:Name="UIAdminInfoTotalValue" Content="[cantidad]" HorizontalAlignment="Left" Margin="81,83,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Cuenta: Administrador" HorizontalAlignment="Left" Height="22" Margin="136,10,0,0" VerticalAlignment="Top" Width="141"/>

@@ -49,22 +49,26 @@ namespace Gestion_Taller {
             String message = "";
 
             foreach (Teacher teacher in teachers) {
-                message += "Id: " + teacher.Id + " First name: " + teacher.FirstName + "; Last name: " + teacher.LastName + Environment.NewLine;
+                message += teacher.Id + ": " + teacher.FullName + Environment.NewLine;
             }
 
             MessageBox.Show(message);
         }
 
      
-        private void ShowTools(object sender, RoutedEventArgs e)
-        {
-            List<Tools> tools = DBConnection.Instance.GetTools();
+        private void ShowInventory(object sender, RoutedEventArgs e) {
+            List<InventoryItem> inventory = DBConnection.Instance.GetInventoryItems();
 
             String message = "";
 
-            foreach (Tools tool in tools) {
-                message += "Id: " + tool.Id + " Name: " + tool.Name + "; Description: " + tool.Description + "; Icon ID:" + tool.Icon_id + Environment.NewLine;
+            if (inventory.Count > 0) {
+                foreach (InventoryItem item in inventory) {
+                    message += item.Id + ": " + item.Name + " " + item.Description + " IID: " + item.Icon_id + Environment.NewLine;
+                }
+            } else {
+                message = "El inventario esta vacio.";
             }
+
 
             MessageBox.Show(message);
         }

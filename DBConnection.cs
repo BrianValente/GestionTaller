@@ -27,14 +27,14 @@ namespace Gestion_Taller {
 
         private void createTables() {
             String sqlCreateTeachersTable = "CREATE TABLE teachers (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, firstname TEXT NOT NULL, lastname TEXT NOT NULL);";
-            String sqlCreateToolsTable = "CREATE TABLE tools (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, description TEXT NOT NULL, icon_id INTEGER);";
-            String sqlCreateTransactionsTable = "CREATE TABLE transactions (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, tool_type_id INTEGER NOT NULL, teacher_id INTEGER);";
+            String sqlCreateInventoryTable = "CREATE TABLE inventory (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, description TEXT NOT NULL, icon_id INTEGER);";
+            String sqlCreateTransactionsTable = "CREATE TABLE transactions (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, inventory_type_id INTEGER NOT NULL, teacher_id INTEGER);";
 
             String sqlInsertBrianXd = "INSERT INTO teachers (firstname, lastname) VALUES ('Brian', 'Valente');";
             String sqlInsertCristianXd = "INSERT INTO teachers (firstname, lastname) VALUES ('Cristian', 'De Leon');";
 
 
-            String query = sqlCreateTeachersTable + sqlCreateToolsTable + sqlCreateTransactionsTable + sqlInsertBrianXd + sqlInsertCristianXd;
+            String query = sqlCreateTeachersTable + sqlCreateInventoryTable + sqlCreateTransactionsTable + sqlInsertBrianXd + sqlInsertCristianXd;
 
             SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
             command.ExecuteNonQuery();
@@ -64,8 +64,7 @@ namespace Gestion_Taller {
         public Teacher AddTeacher(String firstname, String lastname) {
             String query = "INSERT INTO teachers (firstname, lastname) VALUES ('" + firstname + "', '" + lastname + "');";
 
-            SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
-            SQLiteDataReader reader = command.ExecuteReader();
+            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
 
             return new Teacher((int)sqliteConnection.LastInsertRowId, firstname, lastname);
         }
@@ -78,9 +77,8 @@ namespace Gestion_Taller {
             SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
             SQLiteDataReader reader = command.ExecuteReader();
 
-            while (reader.Read()) {
+            while (reader.Read())
                 teachers.Add(new Teacher(reader.GetInt32(0), reader.GetString(1), reader.GetString(2)));
-            }
 
             return teachers;
         }
@@ -95,18 +93,21 @@ namespace Gestion_Taller {
             return new Teacher(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
         }
 
-        public List<Tools> GetTools()
-        {
-            List<Tools> tools = new List<Tools>();
 
-            String query = "SELECT * FROM tools";
+
+
+        // Inventory
+
+        public List<InventoryItem> GetInventoryItems() {
+            List<InventoryItem> tools = new List<InventoryItem>();
+
+            String query = "SELECT * FROM inventory";
 
             SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
             SQLiteDataReader reader = command.ExecuteReader();
 
-            while (reader.Read()) {
-                tools.Add(new Tools(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3)));
-            }
+            while (reader.Read())
+                tools.Add(new InventoryItem(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3)));
 
             return tools;
         }
@@ -126,19 +127,18 @@ namespace Gestion_Taller {
             FullName = firstname + " " + lastname;
         }
     }
-    public class Tools
-    {
-    public int Id;
-    public String Name;
-    public String Description;
-    public int Icon_id;
 
-        public Tools(int id, String name, String description, int icon_id)
-        {
-        Id = id;
-        Name = name;
-        Description = description;
-        Icon_id = icon_id;
+    public class InventoryItem {
+        public int Id;
+        public String Name;
+        public String Description;
+        public int Icon_id;
+
+        public InventoryItem(int id, String name, String description, int icon_id) {
+            Id = id;
+            Name = name;
+            Description = description;
+            Icon_id = icon_id;
         }
     }
 
