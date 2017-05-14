@@ -4,25 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_Taller"
-        mc:Ignorable="d" Height="300" Width="300" Title="Editar herramienta">
+        mc:Ignorable="d"
+        Title="AdminInventoryEditWindow" Height="300" Width="300">
     <Grid>
-        <Label Content="Editar herramienta" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,10,0,0"/>
-        <Button Content="Volver" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" Click="ReturnButton"/>
-        <Label Content="[Base de datos]" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,66,0,0"/>
-        <Label Content="Nuevo nombre:" HorizontalAlignment="Left" Height="26" Margin="8,110,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.354"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-0.312"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="115,113,0,0"/>
-        <Label Content="Nueva descripcion:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,140,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="115,143,0,0"/>
-        <Button Content="Aceptar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="105,205,0,0"/>
-
+        <Label x:Name="label" Content="Editar herramienta" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Nuevo nombre:" HorizontalAlignment="Left" Margin="21,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Nueva descripcion:" HorizontalAlignment="Left" Margin="13,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.234,0.54"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="123,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="123,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label3" Content="[base de datos]" HorizontalAlignment="Left" Margin="91,61,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Volver" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Click="button_Click"/>
+        <Button x:Name="button1" Content="Aceptar" HorizontalAlignment="Left" Margin="86,208,0,0" VerticalAlignment="Top" Width="128" Height="22" RenderTransformOrigin="0.303,0.338"/>
     </Grid>
 </Window>

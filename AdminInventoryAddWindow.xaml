@@ -5,20 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_Taller"
         mc:Ignorable="d"
-        Title="Agregar Herramienta" Height="300" Width="300">
+        Title="AdminInventoryAddWindow" Height="300" Width="300">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="16*"/>
-            <ColumnDefinition Width="163*"/>
-            <ColumnDefinition Width="113*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="83,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="64" Margin="83,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-        <Label Content="Nombre:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
-        <Label Content="Descripcion:" Grid.Column="1" HorizontalAlignment="Left" Margin="4,140,0,0" VerticalAlignment="Top"/>
-        <Button Grid.ColumnSpan="2" Content="Volver" HorizontalAlignment="Left" VerticalAlignment="Top" Width="47" Click="ReturnButton"/>
-        <Label Content="Agregar una herramienta" Grid.Column="1" HorizontalAlignment="Left" Margin="60,17,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button Content="Aceptar" Grid.Column="1" HorizontalAlignment="Left" Margin="83,217,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Agregar Herramienta" HorizontalAlignment="Left" Margin="79,17,0,0" VerticalAlignment="Top"/>
+        <Button Content="Volver" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Click="ReturnButton"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="20,79,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="81,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Aceptar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="104,196,0,0"/>
+        <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="84,122,0,0"/>
 
     </Grid>
 </Window>

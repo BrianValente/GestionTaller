@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Gestion_Taller
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Lógica de interacción para AdminInventoryAddWindow.xaml
     /// </summary>
     public partial class AdminInventoryAddWindow : Window
     {

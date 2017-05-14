@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Gestion_Taller
 {
     /// <summary>
-    /// Lógica de interacción para Window3.xaml
+    /// Lógica de interacción para AdminInventoryEditWindow.xaml
     /// </summary>
     public partial class AdminInventoryEditWindow : Window
     {
@@ -24,7 +24,7 @@ namespace Gestion_Taller
             InitializeComponent();
         }
 
-        private void ReturnButton(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
             AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
             adminHomeWindow.Show();

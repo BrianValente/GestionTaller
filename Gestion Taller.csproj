@@ -72,6 +72,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminInventoryAddWindow.xaml.cs">
+      <DependentUpon>AdminInventoryAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventoryDeleteWindow.xaml.cs">
+      <DependentUpon>AdminInventoryDeleteWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventoryEditWindow.xaml.cs">
+      <DependentUpon>AdminInventoryEditWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminTeacherAddWindow.xaml.cs">
       <DependentUpon>AdminTeacherAddWindow.xaml</DependentUpon>
     </Compile>
@@ -89,18 +98,21 @@
     <Compile Include="AdminHomeWindow.xaml.cs">
       <DependentUpon>AdminHomeWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdminInventoryAddWindow.xaml.cs">
-      <DependentUpon>AdminInventoryAddWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AdminInventoryDeleteWindow.xaml.cs">
-      <DependentUpon>AdminInventoryDeleteWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AdminInventoryEditWindow.xaml.cs">
-      <DependentUpon>AdminInventoryEditWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WithdrawReturnWindow.xaml.cs">
       <DependentUpon>WithdrawReturnWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminInventoryAddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminInventoryDeleteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminInventoryEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminTeacherAddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,18 +142,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminHomeWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AdminInventoryAddWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AdminInventoryDeleteWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AdminInventoryEditWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
