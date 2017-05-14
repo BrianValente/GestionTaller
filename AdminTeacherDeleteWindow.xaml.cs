@@ -12,20 +12,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Gestion_Taller
-{
+namespace Gestion_Taller {
     public partial class AdminTeacherDeleteWindow : Window
     {
-        public AdminTeacherDeleteWindow()
-        {
+        public AdminTeacherDeleteWindow() {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
+        private void button1_Click(object sender, RoutedEventArgs e) {
             AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
             adminHomeWindow.Show();
             this.Close();
+        }
+
+        private void Delete(object sender, RoutedEventArgs e) {
+            int teacherId;
+            String message;
+
+            int.TryParse(UIIdTextBox.Text, out teacherId);
+
+            if (DBConnection.Instance.DeleteTeacherById(teacherId)) {
+                message = "Eliminado con exito";
+            } else {
+                message = "El usuario no existe";
+            }
+
+            MessageBox.Show(message);
         }
     }
 }

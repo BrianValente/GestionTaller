@@ -8,10 +8,10 @@
         Title="AdminDeleteTeacherWindow" Height="300" Width="300">
     <Grid>
         <Label x:Name="label" Content="Eliminar profesor" HorizontalAlignment="Left" Margin="92,33,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Buscar por nombre:" HorizontalAlignment="Left" Margin="28,98,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="147,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1" Content="ID:" HorizontalAlignment="Left" Margin="28,98,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIIdTextBox" HorizontalAlignment="Left" Height="23" Margin="147,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label2" Content="[base de datos]" HorizontalAlignment="Left" Margin="101,179,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Eliminar seleccionado/s" HorizontalAlignment="Left" Margin="147,235,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="UIDeleteButton" Content="Eliminar" HorizontalAlignment="Left" Margin="147,235,0,0" VerticalAlignment="Top" Width="138" Click="Delete"/>
         <Button x:Name="button1" Content="&lt;- Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="54" Click="button1_Click"/>
 
     </Grid>

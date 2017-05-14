@@ -93,6 +93,12 @@ namespace Gestion_Taller {
             return new Teacher(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
         }
 
+        public bool DeleteTeacherById(int id) {
+            String query = "DELETE FROM teachers WHERE id=" + id;
+            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
+            return true;
+        }
+
 
 
 
