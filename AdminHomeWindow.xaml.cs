@@ -14,10 +14,14 @@ using System.Windows.Shapes;
 
 namespace Gestion_Taller {
     public partial class AdminHomeWindow : Window {
+        private List<Teacher> Teachers;
+
         public AdminHomeWindow() {
             InitializeComponent();
 
             UITeacherInfoTotalValue.Content = DBConnection.Instance.GetTeachers().Count;
+
+            UITeachersDataGrid.ItemsSource = DBConnection.Instance.GetTeachers();
         }
 
         private void openAdminTeacherAddWindow(object sender, RoutedEventArgs e) {

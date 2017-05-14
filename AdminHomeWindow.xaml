@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_Taller"
         mc:Ignorable="d"
-        Title="Window1" Height="347.727" Width="417.614">
+        Title="Window1" Height="352.884" Width="697.564">
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="187" Margin="205,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
 
@@ -13,6 +13,11 @@
         <Button x:Name="UINavigationBackButton" Content="&lt;- Atrás" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="51" Click="goBack" />
 
         <!-- Teachers -->
+
+        <DataGrid Margin="396,82,52,83" Name="UITeachersDataGrid">
+            
+        </DataGrid>
+        
         <Label x:Name="UITeacherTitleLabel" Content="Profesores" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top"/>
 
         <Label x:Name="UITeacherInfoTotalTitle" Content="Total:" HorizontalAlignment="Left" Margin="238,83,0,0" VerticalAlignment="Top"/>
