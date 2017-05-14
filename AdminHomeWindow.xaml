@@ -23,10 +23,6 @@
         <Button x:Name="UITeacherModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="330,130,0,0" VerticalAlignment="Top" Width="61" Click="openAdminTeacherEditWindow"/>
         <Button x:Name="UITeacherViewButton" Content="Ver profesores" HorizontalAlignment="Left" Margin="247,165,0,0" VerticalAlignment="Top" Width="109" Click="ShowTeachers" />
 
-        <Image x:Name="Agregar_profesor_png" Margin="214,206,137,60" Source="Images/ic_teacher_add.png" Stretch="Fill" RenderTransformOrigin="0.071,0.198"/>
-        <Image x:Name="Borrar_profesor_png" Margin="279,206,72,60" Source="Images/ic_teacher_delete.png" Stretch="Fill"/>
-        <Image x:Name="Editar_profesor_png" Margin="343,206,10,60" Source="Images/ic_teacher_edit.png" Stretch="Fill"/>
-
         <!-- Inventory -->
         <Label x:Name="UIInventoryTitleLabel" Content="Inventario general" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top"/>
         <Button x:Name="UIInventoryAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="51"/>
