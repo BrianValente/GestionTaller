@@ -37,7 +37,6 @@ namespace Gestion_Taller
             int.TryParse(UIInventoryIconIDTextBox.Text, out numero);
             InventoryItem inventoryItem = DBConnection.Instance.AddInventoryItem(UIInventoryNameTextBox.Text, UIInventoryDescTextBox.Text, numero);
             MessageBox.Show("Herramienta " + inventoryItem.Name + " agregado exitosamente.");
-            this.Close();
         }
     }
 }
