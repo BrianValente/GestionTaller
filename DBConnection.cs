@@ -143,11 +143,11 @@ namespace Gestion_Taller {
     
 
     public class InventoryItem {
-        public int Id;
-        public String Name;
-        public String Description;
-        public int Icon_id;
-        public int UserIdUsing;
+        public int Id { get; private set; }
+        public String Name { get; private set; }
+        public String Description { get; private set; }
+        public int Icon_id { get; private set; }
+        public int UserIdUsing { get; private set; }
 
         public InventoryItem(int id, String name, String description, int userIdUsing, int icon_id) {
             this.Id = id;
