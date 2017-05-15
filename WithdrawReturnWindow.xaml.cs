@@ -57,18 +57,13 @@ namespace Gestion_Taller {
         private void OnTeacherSelectionChange(object sender, SelectionChangedEventArgs e) {
             Teacher selectedTeacher = (Teacher)UITeacherComboBox.SelectedItem;
             List<InventoryItem> itemsUsedByTeacher = DBConnection.Instance.GetInventoryItemsBeingUsedByUserId(selectedTeacher.Id);
-            /*String message = "";
-
-            if (itemsUsedByTeacher.Count > 0) {
-                foreach (InventoryItem item in itemsUsedByTeacher)
-                    message += "Id: " + item.Id + ", " + item.Name;
-            } else {
-                message = "Este profesor no esta utilizando ningun item del inventario.";
-            }
-
-            MessageBox.Show(message);*/
 
             UIMainDataGrid.ItemsSource = itemsUsedByTeacher;
+            UIMainDataGrid.Columns[0].Header = "ID";
+            UIMainDataGrid.Columns[1].Header = "Nombre";
+            UIMainDataGrid.Columns[2].Header = "Descripción";
+            UIMainDataGrid.Columns[3].Visibility = Visibility.Hidden;
+            UIMainDataGrid.Columns[4].Visibility = Visibility.Hidden;
         }
     }
 }
