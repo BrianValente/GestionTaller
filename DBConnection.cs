@@ -137,24 +137,22 @@ namespace Gestion_Taller {
 
             return inventoryItems;
         }
-    }
-}
 
-    
+        public void SetInventoryItemUser(int inventoryItemId, int userId) {
+            String query = "UPDATE inventory SET user_using=" + userId + " WHERE id=" + inventoryItemId;
+            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
+        }
 
-    public class InventoryItem {
-        public int Id { get; private set; }
-        public String Name { get; private set; }
-        public String Description { get; private set; }
-        public int Icon_id { get; private set; }
-        public int UserIdUsing { get; private set; }
+        public List<InventoryItem> GetInventoryAvailableItems() {
+            List<InventoryItem> inventoryItems = new List<InventoryItem>();
+            String query = "SELECT * FROM inventory WHERE user_using=0";
+            SQLiteCommand command = new SQLiteCommand(query, sqliteConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
 
-        public InventoryItem(int id, String name, String description, int userIdUsing, int icon_id) {
-            this.Id = id;
-            this.Name = name;
-            this.Description = description;
-            this.UserIdUsing = userIdUsing;
-            this.Icon_id = icon_id;
+            while (reader.Read())
+                inventoryItems.Add(new InventoryItem(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4)));
+
+            return inventoryItems;
         }
     }
-
+}

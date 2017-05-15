@@ -15,6 +15,14 @@ using System.Windows.Shapes;
 namespace Gestion_Taller {
     public partial class WithdrawReturnWindow : Window {
         private bool withdraw = false;
+        private bool Return {
+            get {
+                return !withdraw;
+            } set {
+                withdraw = !value;
+            }
+        }
+        private Teacher selectedTeacher;
 
         private WithdrawReturnWindow(bool withdraw) {
             InitializeComponent();
@@ -29,6 +37,20 @@ namespace Gestion_Taller {
 
             UITeacherComboBox.ItemsSource = teachers;
             UITeacherComboBox.DisplayMemberPath = "FullName";
+
+            // Show a checkbox on every row
+            DataGridCheckBoxColumn withdrawCheckboxColumn = new DataGridCheckBoxColumn();
+            withdrawCheckboxColumn.DisplayIndex = 0;
+            withdrawCheckboxColumn.Header = Return? "Devolver?" : "Retirar?";
+            UIMainDataGrid.Columns.Add(withdrawCheckboxColumn);
+
+            // Hide dumb row
+            UIInventorySearchGridRow.Visibility = Visibility.Hidden;
+            UIGrid.RowDefinitions[2].Height = new GridLength(0);
+
+            // ??
+            UIMainDataGrid.EnableRowVirtualization = true;
+            UIMainDataGrid.EnableColumnVirtualization = true;
         }
 
         private void GoBack(object sender, RoutedEventArgs e) {
@@ -50,20 +72,49 @@ namespace Gestion_Taller {
             return GetWindow(true);
         }
 
-        private void WithdrawReturnAction(object sender, RoutedEventArgs e) {
-            MessageBox.Show("tu vieja");
+        private void OnTeacherSelectionChange(object sender, SelectionChangedEventArgs e) {
+            selectedTeacher = (Teacher)UITeacherComboBox.SelectedItem;
+            reloadDataGrid();
         }
 
-        private void OnTeacherSelectionChange(object sender, SelectionChangedEventArgs e) {
-            Teacher selectedTeacher = (Teacher)UITeacherComboBox.SelectedItem;
-            List<InventoryItem> itemsUsedByTeacher = DBConnection.Instance.GetInventoryItemsBeingUsedByUserId(selectedTeacher.Id);
+        private void reloadDataGrid() {
+            List<InventoryItem> items;
+            if (Return) {
+                if (selectedTeacher == null) {
+                    return;
+                }
+                items = DBConnection.Instance.GetInventoryItemsBeingUsedByUserId(selectedTeacher.Id);
+            } else {
+                items = DBConnection.Instance.GetInventoryAvailableItems();
+            }
+                
+            UIMainDataGrid.ItemsSource = items;
 
-            UIMainDataGrid.ItemsSource = itemsUsedByTeacher;
-            UIMainDataGrid.Columns[0].Header = "ID";
-            UIMainDataGrid.Columns[1].Header = "Nombre";
-            UIMainDataGrid.Columns[2].Header = "Descripción";
-            UIMainDataGrid.Columns[3].Visibility = Visibility.Hidden;
+            UIMainDataGrid.Columns[1].Header = "ID";
+            UIMainDataGrid.Columns[2].Header = "Nombre";
+            UIMainDataGrid.Columns[3].Header = "Descripción";
             UIMainDataGrid.Columns[4].Visibility = Visibility.Hidden;
+            UIMainDataGrid.Columns[5].Visibility = Visibility.Hidden;
+        }
+
+        private void OnSend(object sender, RoutedEventArgs e) {
+            List<InventoryItem> selectedItems = new List<InventoryItem>();
+
+            for (int i=0; i<UIMainDataGrid.Items.Count; i++) {
+                DataGridRow row = (DataGridRow)UIMainDataGrid.ItemContainerGenerator.ContainerFromIndex(i);
+                bool? returnBool = ((CheckBox) UIMainDataGrid.Columns[0].GetCellContent(row)).IsChecked;
+                if ((bool)returnBool) {
+                    selectedItems.Add((InventoryItem)row.Item);
+                }
+            }
+
+            int userId = Return ? 0 : selectedTeacher.Id;
+
+            foreach (InventoryItem item in selectedItems)
+                item.UserIdUsing = userId;
+
+            reloadDataGrid();
+            
         }
     }
 }

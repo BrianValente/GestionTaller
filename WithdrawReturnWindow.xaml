@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Gestion_Taller"
         mc:Ignorable="d"
         Title="WithdrawReturnWindow" Height="400" Width="500">
-    <Grid>
+    <Grid Name="UIGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1.5*"/>
@@ -30,9 +30,9 @@
             <ComboBox Name="UITeacherComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="25" Margin="20, 5, 0, 5" SelectionChanged="OnTeacherSelectionChange"/>
         </Grid>
 
-        <Grid Grid.Row="2">
-            <Label Content="Herramienta:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="80, 0, 0, 0" Name="ToolLabel" />
-            <TextBox  Text="" HorizontalAlignment="Center" Width="150" Height="25" Margin="20, 5, 0, 5" Name="SearchToolTextBox" />
+        <Grid Grid.Row="2" Name="UIInventorySearchGridRow">
+            <Label Content="Herramienta:" VerticalAlignment="Center" FontSize="16" Name="UIInventoryLabel" Margin="80,0,0,0" />
+            <TextBox  Text="" Width="150" Height="25" Margin="20, 5, 0, 5" Name="UISearchInventoryTextBox" />
         </Grid>
 
         <Grid Grid.Row="3" Margin="0, 10, 0, 0">
@@ -40,7 +40,7 @@
         </Grid>
 
         <Grid Grid.Row="4">
-            <Button Name="UIWithdrawReturnButton" Content="Who knows?" Height="30" HorizontalAlignment="Right" Padding="20, 0, 20, 0" Margin="0, 0, 20, 0" Click="WithdrawReturnAction"/>
+            <Button Name="UIWithdrawReturnButton" Content="Who knows?" Height="30" HorizontalAlignment="Right" Padding="20, 0, 20, 0" Margin="0, 0, 20, 0" Click="OnSend"/>
         </Grid>
     </Grid>
 </Window>

@@ -91,6 +91,7 @@
       <DependentUpon>AdminTeacherEditWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="InventoryItem.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TeacherHomeWindow.xaml.cs">
       <DependentUpon>TeacherHomeWindow.xaml</DependentUpon>
