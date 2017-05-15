@@ -14,19 +14,12 @@
 
         <!-- Teachers -->
 
-        <DataGrid Margin="396,82,52,83" Name="UITeachersDataGrid">
-            
-        </DataGrid>
-        
-        <Label x:Name="UITeacherTitleLabel" Content="Profesores" HorizontalAlignment="Left" Margin="256,52,0,0" VerticalAlignment="Top"/>
+        <DataGrid Margin="211,53,10.5,42.5" Name="UITeachersDataGrid" />
 
-        <Label x:Name="UITeacherInfoTotalTitle" Content="Total:" HorizontalAlignment="Left" Margin="238,83,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="UITeacherInfoTotalValue" Content="[cantidad]" HorizontalAlignment="Left" Margin="277,83,0,0" VerticalAlignment="Top"/>
-
-        <Button x:Name="UITeacherAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="228,130,0,0" VerticalAlignment="Top" Width="49" Click="openAdminTeacherAddWindow"/>
-        <Button x:Name="UITeacherRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="282,130,0,0" VerticalAlignment="Top" Width="43" Click="openAdminTeacherDeleteWindow"/>
-        <Button x:Name="UITeacherModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="330,130,0,0" VerticalAlignment="Top" Width="61" Click="openAdminTeacherEditWindow"/>
-        <Button x:Name="UITeacherViewButton" Content="Ver profesores" HorizontalAlignment="Left" Margin="247,165,0,0" VerticalAlignment="Top" Width="109" Click="ShowTeachers" />
+        <Button x:Name="UITeacherAddButton" Content="Agregar" HorizontalAlignment="Left" Margin="211,283,0,0" VerticalAlignment="Top" Width="49" Click="openAdminTeacherAddWindow"/>
+        <Button x:Name="UITeacherRemoveButton" Content="Quitar" HorizontalAlignment="Left" Margin="260,283,0,0" VerticalAlignment="Top" Width="43" Click="openAdminTeacherDeleteWindow"/>
+        <Button x:Name="UITeacherModifyButton" Content="Modificar" HorizontalAlignment="Left" Margin="303,283,0,0" VerticalAlignment="Top" Width="61" Click="openAdminTeacherEditWindow"/>
+        <Button x:Name="UITeacherViewButton" Content="Ver profesores" HorizontalAlignment="Left" Margin="364,283,0,0" VerticalAlignment="Top" Width="109" Click="ShowTeachers" />
 
         <!-- Inventory -->
         <Label x:Name="UIInventoryTitleLabel" Content="Inventario general" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top"/>

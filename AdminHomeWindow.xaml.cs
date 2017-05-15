@@ -19,9 +19,8 @@ namespace Gestion_Taller {
         public AdminHomeWindow() {
             InitializeComponent();
 
-            UITeacherInfoTotalValue.Content = DBConnection.Instance.GetTeachers().Count;
-
-            UITeachersDataGrid.ItemsSource = DBConnection.Instance.GetTeachers();
+            Teachers = DBConnection.Instance.GetTeachers();
+            UITeachersDataGrid.ItemsSource = Teachers;
         }
 
         private void openAdminTeacherAddWindow(object sender, RoutedEventArgs e) {

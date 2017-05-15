@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Gestion_Taller {
     public class Teacher {
-        public int Id;
-
         private String firstName;
         private String lastName;
+
+        public int Id { get; private set; }
 
         public String FirstName {
             get {
@@ -32,7 +32,7 @@ namespace Gestion_Taller {
         public String FullName {
             get {
                 return firstName + " " + lastName;
-            } set {
+            } private set {
 
             }
         }
