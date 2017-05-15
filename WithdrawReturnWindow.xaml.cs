@@ -24,6 +24,11 @@ namespace Gestion_Taller {
                 UIWithdrawReturnButton.Content = "Retirar";
             else
                 UIWithdrawReturnButton.Content = "Devolver";
+
+            List<Teacher> teachers = DBConnection.Instance.GetTeachers();
+
+            UITeacherComboBox.ItemsSource = teachers;
+            UITeacherComboBox.DisplayMemberPath = "FullName";
         }
 
         private void GoBack(object sender, RoutedEventArgs e) {
@@ -47,6 +52,11 @@ namespace Gestion_Taller {
 
         private void WithdrawReturnAction(object sender, RoutedEventArgs e) {
             MessageBox.Show("tu vieja");
+        }
+
+        private void OnTeacherSelectionChange(object sender, SelectionChangedEventArgs e) {
+            Teacher selectedTeacher = (Teacher)UITeacherComboBox.SelectedItem;
+            MessageBox.Show(selectedTeacher.Id + " " + selectedTeacher.FullName);
         }
     }
 }
