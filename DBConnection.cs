@@ -107,9 +107,9 @@ namespace Gestion_Taller {
         // Inventory
         public InventoryItem AddInventoryItem(String name, String description, int icon_id)
         {
-            String query = "INSERT INTO teachers (name, description, icon_id) VALUES ('" + name + "', '" + description + "', '" + icon_id + "');";
+            String query = "INSERT INTO Inventory (name, description, icon_id) VALUES ('" + name + "', '" + description + "', '" + icon_id + "');";
 
-            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
+           new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
 
             return new InventoryItem((int)sqliteConnection.LastInsertRowId, name, description, icon_id);
         }

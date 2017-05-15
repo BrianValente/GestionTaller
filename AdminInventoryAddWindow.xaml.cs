@@ -30,5 +30,14 @@ namespace Gestion_Taller
             adminHomeWindow.Show();
             this.Close();
         }
+
+        private void AddInventoryItemButton(object sender, RoutedEventArgs e)
+        {
+            int numero;
+            int.TryParse(UIInventoryIconIDTextBox.Text, out numero);
+            InventoryItem inventoryItem = DBConnection.Instance.AddInventoryItem(UIInventoryNameTextBox.Text, UIInventoryDescTextBox.Text, numero);
+            MessageBox.Show("Herramienta " + inventoryItem.Name + " agregado exitosamente.");
+            this.Close();
+        }
     }
 }

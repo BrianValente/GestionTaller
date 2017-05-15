@@ -24,7 +24,7 @@ namespace Gestion_Taller
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void ReturnButton(object sender, RoutedEventArgs e)
         {
             AdminHomeWindow adminHomeWindow = new AdminHomeWindow();
             adminHomeWindow.Show();

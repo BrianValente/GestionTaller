@@ -10,10 +10,12 @@
         <Label Content="Agregar Herramienta" HorizontalAlignment="Left" Margin="79,17,0,0" VerticalAlignment="Top"/>
         <Button Content="Volver" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Click="ReturnButton"/>
         <Label Content="Nombre:" HorizontalAlignment="Left" Margin="20,79,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="81,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Aceptar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="104,196,0,0"/>
+        <TextBox x:Name="UIInventoryNameTextBox" HorizontalAlignment="Left" Height="23" Margin="84,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Aceptar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="104,196,0,0" Click="AddInventoryItemButton"/>
         <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="84,122,0,0"/>
+        <TextBox x:Name="UIInventoryDescTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="84,122,0,0"/>
+        <TextBox x:Name="UIInventoryIconIDTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="84,162,0,0"/>
+        <Label Content="Icon ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,159,0,0"/>
 
     </Grid>
 </Window>
