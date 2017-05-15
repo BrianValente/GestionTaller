@@ -56,7 +56,17 @@ namespace Gestion_Taller {
 
         private void OnTeacherSelectionChange(object sender, SelectionChangedEventArgs e) {
             Teacher selectedTeacher = (Teacher)UITeacherComboBox.SelectedItem;
-            MessageBox.Show(selectedTeacher.Id + " " + selectedTeacher.FullName);
+            List<InventoryItem> itemsUsedByTeacher = DBConnection.Instance.GetInventoryItemsBeingUsedByUserId(selectedTeacher.Id);
+            String message = "";
+
+            if (itemsUsedByTeacher.Count > 0) {
+                foreach (InventoryItem item in itemsUsedByTeacher)
+                    message += "Id: " + item.Id + ", " + item.Name;
+            } else {
+                message = "Este profesor no esta utilizando ningun item del inventario.";
+            }
+
+            MessageBox.Show(message);
         }
     }
 }
