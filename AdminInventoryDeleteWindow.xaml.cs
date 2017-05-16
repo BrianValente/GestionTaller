@@ -30,5 +30,21 @@ namespace Gestion_Taller
             adminHomeWindow.Show();
             this.Close();
         }
+
+        private void DeleteInventoryItemButton(object sender, RoutedEventArgs e)
+        {
+            int inventoryItemId;
+            String msg;
+
+            int.TryParse(UIInventoryItemTextBox.Text, out inventoryItemId);
+
+            if (DBConnection.Instance.DeleteInventoryItemById(inventoryItemId)) {
+                msg= "Eliminado con exito";
+            } else {
+                msg = "El usuario no existe";
+            }
+
+            MessageBox.Show(msg);
+        }
     }
 }

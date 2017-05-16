@@ -113,6 +113,13 @@ namespace Gestion_Taller {
            return new InventoryItem((int)sqliteConnection.LastInsertRowId, name, description, 0, icon_id);
         }
 
+        public bool DeleteInventoryItemById(int id)
+        {
+            String query = "DELETE FROM inventory WHERE id=" + id;
+            new SQLiteCommand(query, sqliteConnection).ExecuteNonQuery();
+            return true;
+        }
+
         public List<InventoryItem> GetInventoryItems() {
             List<InventoryItem> tools = new List<InventoryItem>();
 

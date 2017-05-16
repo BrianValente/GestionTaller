@@ -10,7 +10,7 @@
         <Label Content="Eliminar herramienta" HorizontalAlignment="Left" Margin="79,17,0,0" VerticalAlignment="Top"/>
         <Button Content="Volver" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Click="ReturnButton"/>
         <Label Content="ID de herramienta:" HorizontalAlignment="Left" Margin="85,69,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="79,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Aceptar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="103,172,0,0"/>
+        <TextBox x:Name="UIInventoryItemTextBox" HorizontalAlignment="Left" Height="23" Margin="79,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Aceptar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="103,172,0,0" Click="DeleteInventoryItemButton"/>
     </Grid>
 </Window>
